@@ -6,23 +6,32 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="71">
-        <next>
-          <block type="robot_delay" id="79" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="86">
-                <field name="NUM">5000</field>
-              </block>
-            </value>
+      <block type="controls_repeat" id="203" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="226">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="71">
             <next>
-              <block type="movement_stutter" id="107">
+              <block type="robot_delay" id="79" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="86">
+                    <field name="NUM">5000</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="movement_reverse" id="118">
+                  <block type="movement_stutter" id="107">
                     <next>
-                      <block type="movement_stop" id="96">
+                      <block type="movement_reverse" id="118">
                         <next>
-                          <block type="multimedia_playwav" id="155">
-                            <field name="WAV">my name is jeff</field>
+                          <block type="movement_stop" id="96">
+                            <next>
+                              <block type="comment_comment" id="234">
+                                <field name="TEXT">hi</field>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -32,7 +41,7 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
   </block>
