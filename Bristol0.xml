@@ -1,27 +1,36 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="431" inline="true" x="-24" y="65">
-    <value name="TIMES">
-      <block type="math_number" id="438">
-        <field name="NUM">5</field>
+  <block type="robot_delay" id="570" inline="true" x="-28" y="22">
+    <value name="DELAY">
+      <block type="math_number" id="577">
+        <field name="NUM">5000</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="movement_reverse" id="363">
-        <next>
-          <block type="movement_left" id="374">
+    <next>
+      <block type="controls_repeat" id="431" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="438">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_reverse" id="363">
             <next>
-              <block type="movement_forward" id="391">
+              <block type="movement_left" id="374">
                 <next>
-                  <block type="movement_right" id="413">
+                  <block type="movement_forward" id="391">
                     <next>
-                      <block type="robot_delay" id="440" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="475">
-                            <field name="NUM">1000</field>
-                          </block>
-                        </value>
+                      <block type="movement_right" id="413">
                         <next>
-                          <block type="movement_stutter" id="424"></block>
+                          <block type="robot_delay" id="440" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="475">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stutter" id="424"></block>
+                            </next>
+                          </block>
                         </next>
                       </block>
                     </next>
@@ -30,11 +39,11 @@
               </block>
             </next>
           </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="506"></block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="506"></block>
     </next>
   </block>
 </xml>
